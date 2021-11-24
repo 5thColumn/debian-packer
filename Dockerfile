@@ -4,6 +4,7 @@ COPY entrypoint.sh /entrypoint.sh
 COPY debianpacker.py /usr/bin/debpack
 COPY requirements.txt /requirements.txt
 
+RUN echo "here"
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 

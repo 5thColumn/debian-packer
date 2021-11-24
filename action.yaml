@@ -47,8 +47,6 @@ runs:
     - ${{ inputs.package_version }}
     - -a
     - ${{ inputs.package_arch }}
-    - -m
-    - ${{ inputs.layout_map_file }}
     - -i
     - ${{ inputs.input_dir }}
     - -o

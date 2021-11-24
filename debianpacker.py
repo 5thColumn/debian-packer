@@ -162,7 +162,7 @@ def run_package_generation():
 #@click.option('-m', '--pkg_file_map', type=click.File('r'), default=DEFAULT_FILE_MAP, help=HELP_FILE_MAP)
 @click.option('-i', '--input', type=click.Path(exists=True, readable=True), default=DEFAULT_INPUT_PATH, help=HELP_IP)
 @click.option('-o', '--output', type=click.Path(exists=False, writable=True), default=DEFAULT_OUTPUT_PATH, help=HELP_OP)
-def main(pkg_name, pkg_version, pkg_arch, pkg_file_map, input, output):
+def main(pkg_name, pkg_version, pkg_arch, input, output):
     click.echo("Welcome to " + APP_NAME + " by " + APP_AUTHOR + "\n")
 
     # Saves the Package Variables
@@ -181,7 +181,8 @@ def main(pkg_name, pkg_version, pkg_arch, pkg_file_map, input, output):
     print("Output Prefix: " + output_src + "\n")
 
     # Loads JSON File as a local variable
-    the_map = json.load(pkg_file_map)
+    #the_map = json.load(pkg_file_map)
+    the_map = []
 
     # Makes the folder where the Package Tree will be constructed
     mkdir_if_not_exist(PACKAGE_TREE_LOC)

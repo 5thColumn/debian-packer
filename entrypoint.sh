@@ -76,7 +76,9 @@ echo "OUTPUT DIRECTORY PATH  = ${PKG_OUT_DIR}"
 # Runs the Main Application
 echo ""
 echo "Starting Debian Packer Application"
-DP_ARGS="-n ${PKG_NAME} -v ${PKG_VER} -a ${PKG_ARCH} -m ${PKG_MAP} -i ${PKG_IN_DIR} -o ${PKG_OUT_DIR}"
+#DP_ARGS="-n ${PKG_NAME} -v ${PKG_VER} -a ${PKG_ARCH} -m ${PKG_MAP} -i ${PKG_IN_DIR} -o ${PKG_OUT_DIR}"
+DP_ARGS="-n ${PKG_NAME} -v ${PKG_VER} -a ${PKG_ARCH} -i ${PKG_IN_DIR} -o ${PKG_OUT_DIR}"
+
 if debpack ${DP_ARGS} ; then
   echo "Success"
 else

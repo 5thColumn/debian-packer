@@ -13,7 +13,7 @@ inputs:
   # Build Directory Layout File
   layout_map_file:
     description: 'Path to JSON configuration file with how to organise the build package directory'
-    required: true
+    required: false
   # Package Name
   package_name:
     description: 'Name of the Package to be used in the file name'
@@ -21,7 +21,7 @@ inputs:
   # Package Version Number
   package_version:
     description: 'Version number of the Package to be used in the file name'
-    required: false
+    required: true
   # Target Architecture of Package
   package_arch:
     description: 'Architecture of the Package to be used in the file name'

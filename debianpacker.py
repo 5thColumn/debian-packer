@@ -159,7 +159,7 @@ def run_package_generation():
 @click.option('-n', '--pkg_name', type=click.STRING, default=GENERIC_PKG_NAME, help=HELP_PKG_NAME)
 @click.option('-v', '--pkg_version', type=click.STRING, help=HELP_PKG_VER)
 @click.option('-a', '--pkg_arch', type=click.STRING, help=HELP_PKG_ARCH)
-@click.option('-m', '--pkg_file_map', type=click.File('r'), default=DEFAULT_FILE_MAP, help=HELP_FILE_MAP)
+#@click.option('-m', '--pkg_file_map', type=click.File('r'), default=DEFAULT_FILE_MAP, help=HELP_FILE_MAP)
 @click.option('-i', '--input', type=click.Path(exists=True, readable=True), default=DEFAULT_INPUT_PATH, help=HELP_IP)
 @click.option('-o', '--output', type=click.Path(exists=False, writable=True), default=DEFAULT_OUTPUT_PATH, help=HELP_OP)
 def main(pkg_name, pkg_version, pkg_arch, pkg_file_map, input, output):

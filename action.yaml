@@ -21,7 +21,7 @@ inputs:
   # Package Version Number
   package_version:
     description: 'Version number of the Package to be used in the file name'
-    required: true
+    required: false
   # Target Architecture of Package
   package_arch:
     description: 'Architecture of the Package to be used in the file name'
